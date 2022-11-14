@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanThin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanRegular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanMedium.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanBold.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanExtraBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanBlack.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Iran_Yekan";
+  src: url("../assets/fonts/IRANYekanExtraBlack.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
