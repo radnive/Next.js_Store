@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html[lang = en] {
+  direction: ltr;
+  font-family: "Poppins", Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html[lang = en] body, html[lang = en] input, html[lang = en] textarea, html[lang = en] button {
+  font-family: "Poppins", Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html[lang=fa] {
+  direction: rtl;
+  font-family: "Iran_Yekan", Tahoma, -apple-system, sans-serif;
+}
+html[lang = fa] body, html[lang = fa] input, html[lang = fa] textarea, html[lang = fa] button {
+  font-family: "Iran_Yekan", Tahoma, -apple-system, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+}
+
+.container {
+  margin: 0 1rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .container {
+    margin: 0 2rem;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

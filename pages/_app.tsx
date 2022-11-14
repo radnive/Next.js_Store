@@ -1,8 +1,10 @@
+import '../styles/colors.css';
 import '../styles/fonts.css';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { IntlProvider } from 'react-intl';
+import { ThemeProvider } from "next-themes";
 
 import en from '../lang/en.json';
 import fa from '../lang/fa.json';
@@ -15,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <IntlProvider locale={locale} messages={messages[locale as keyof typeof messages]}>
-      <Component {...pageProps} dir={getDirection(locale)} />
+      <ThemeProvider defaultTheme='system' enableSystem={true}>
+        <Component {...pageProps} dir={getDirection(locale)} />
+      </ThemeProvider>
     </IntlProvider>
   );
 }
