@@ -20,5 +20,15 @@
   "settings.modal.languages.subtitle": "زبان مورد نظر خودت برای وب سایت انتخاب کن.",
   "settings.modal.languages.persian": "پارسی",
   "settings.modal.languages.english": "انگلیسی",
-  "settings.modal.close": "بستن"
+  "settings.modal.close": "بستن",
+
+  "footer.developer": "توسعه یافته توسط رادنیو",
+  "footer.copyright": "کپی رایت (C) 2022، کلیه حقوق متعلق به فروشگاه است",
+  "footer.termsOfService": "شرایط استفاده از خدمات",
+  "footer.privacyPolicy": "سیاست حفظ حریم خصوصی",
+  "footer.links.products": "{\"title\": \"محصولات\",\"items\": [{\"name\": \"کالا\", \"href\": \"#product\"},{\"name\": \"قیمت گذاری\", \"href\": \"#pricing\"},{\"name\": \"ورود به حساب\", \"href\": \"#login\"},{\"name\": \"درخواست دسترسی\", \"href\": \"#request_access\"},{\"name\": \"شراکت\", \"href\": \"#partnerships\"}]}",
+  "footer.links.aboutUs": "{\"title\": \"درباره ما\",\"items\": [{\"name\": \"درباره فروشگاه\", \"href\": \"#about_store\"}, {\"name\": \"ارتباط با ما\", \"href\": \"#contact_us\"}, {\"name\": \"ویژگی ها\", \"href\": \"#features\"}, {\"name\": \"مشاغل\", \"href\": \"#careers\"}]}",
+  "footer.links.resources": "{\"title\": \"منابع\", \"items\": [{\"name\": \"مرکز کمک رسانی\", \"href\": \"#help_center\"}, {\"name\": \"رزرو دمو\", \"href\": \"#book_a_demo\"}, {\"name\": \"وضعیت سرور\", \"href\": \"#server_status\"}, {\"name\": \"وبلاگ\", \"href\": \"#blog\"}]}",
+  "footer.links.getInTouch": "{\"title\": \"در تماس باشید\", \"feedback\": \"ثبت پرسش یا بازخورد؟\", \"greeting\": \"از خودت بیشتر بگو\"}",
+  "footer.alert": "با استفاده از این وب سایت، متوجه می شوید که اطلاعات ارائه شده فقط برای مقاصد اطلاعاتی ارائه شده است"
 }

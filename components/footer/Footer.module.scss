@@ -1,0 +1,151 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: var(--onBackground);
+      transition: letter-spacing .2s;
+
+      &:hover {
+        letter-spacing: 2px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      list-style-type: none;
+
+      li {
+        font-size: 1rem;
+        color: var(--subtitle);
+      }
+
+      li:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  &__links_category {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style-type: none;
+  }
+
+  &__links__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: var(--onBackground);
+  }
+
+  &__links__link {
+    font-size: 1rem;
+  }
+
+  &__get_in_touch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+      font-size: .75rem;
+      text-align: center;
+      margin: .5rem 0;
+      color: var(--subtitle);
+    }
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .footer {
+    &__links {
+      gap: 4rem;
+    }
+
+    &__alert p {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .footer {
+    gap: 5rem;
+
+    &__main {
+      flex-direction: row;
+      gap: 5rem;
+    }
+
+    &__title {
+      gap: unset;
+      justify-content: space-between;
+
+      ul li {
+        width: max-content;
+
+        &:last-child {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: .5rem;
+
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    &__links {
+      width: 100%;
+      gap: unset;
+      justify-content: space-between;
+    }
+  }
+}

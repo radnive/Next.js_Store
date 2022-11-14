@@ -1,0 +1,26 @@
+.footer__social_medias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+}
+.footer__social_medias svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.footer__social_medias svg path {
+  transition: fill 0.3s;
+  fill: var(--subtitle);
+}
+.footer__social_medias__facebook:hover path {
+  fill: #4267b2;
+}
+.footer__social_medias__instagram:hover path {
+  opacity: 1;
+  fill: #c13584;
+}
+.footer__social_medias__twitter:hover path {
+  opacity: 1;
+  fill: #00acee;
+}/*# sourceMappingURL=SocialMedias.module.css.map */

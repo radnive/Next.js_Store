@@ -1,0 +1,128 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.footer__main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer__title h1 {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--onBackground);
+  transition: letter-spacing 0.2s;
+}
+.footer__title h1:hover {
+  letter-spacing: 2px;
+}
+.footer__title ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  list-style-type: none;
+}
+.footer__title ul li {
+  font-size: 1rem;
+  color: var(--subtitle);
+}
+.footer__title ul li:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.footer__title ul li:last-child span {
+  display: none;
+}
+.footer__links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.footer__links_category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+.footer__links__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--onBackground);
+}
+.footer__links__link {
+  font-size: 1rem;
+}
+.footer__get_in_touch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer__alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__alert p {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: var(--subtitle);
+}
+
+@media only screen and (min-width: 680px) {
+  .footer__links {
+    gap: 4rem;
+  }
+  .footer__alert p {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .footer {
+    gap: 5rem;
+  }
+  .footer__main {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .footer__title {
+    gap: unset;
+    justify-content: space-between;
+  }
+  .footer__title ul li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .footer__title ul li:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .footer__title ul li:last-child span {
+    display: inline;
+  }
+  .footer__links {
+    width: 100%;
+    gap: unset;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */

@@ -30,6 +30,7 @@
 .header__logo {
   font-size: 1.5rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .header__menu {
   width: 100%;

@@ -2,6 +2,7 @@ import { FC, ReactElement } from "react";
 import styles from './MainLayout.module.css';
 import Head from "next/head";
 import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 
 interface MainLayoutProps {
   title: string,
@@ -26,6 +27,8 @@ const MainLayout: FC<MainLayoutProps> = ({children, title, description}) => {
       <main className={`container ${styles.main}`}>
         {children}
       </main>
+
+      <Footer />
     </>
   );
 }

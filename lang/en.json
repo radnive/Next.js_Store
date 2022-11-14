@@ -20,5 +20,15 @@
   "settings.modal.languages.subtitle": "Select your preferred language for website.",
   "settings.modal.languages.persian": "Persian",
   "settings.modal.languages.english": "English",
-  "settings.modal.close": "Close"
+  "settings.modal.close": "Close",
+
+  "footer.developer": "Developed by Radnive",
+  "footer.copyright": "Copyright (C) 2022, All rights reserved by STORE",
+  "footer.termsOfService": "Terms of Service",
+  "footer.privacyPolicy": "Privacy Policy",
+  "footer.links.products": "{\"title\": \"Products\", \"items\": [{\"name\": \"Product\", \"href\": \"#product\"}, {\"name\": \"Pricing\", \"href\": \"#pricing\"}, {\"name\": \"Log in\", \"href\": \"#login\"}, {\"name\": \"Request access\", \"href\": \"#request_access\"}, {\"name\": \"Partnerships\", \"href\": \"#partnerships\"}]}",
+  "footer.links.aboutUs": "{\"title\": \"About us\", \"items\": [{\"name\": \"About STORE\", \"href\": \"#about_store\"}, {\"name\": \"Contact us\", \"href\": \"#contact_us\"},{\"name\": \"Features\", \"href\": \"#features\"}, {\"name\": \"Careers\", \"href\": \"#careers\"}]}",
+  "footer.links.resources": "{\"title\": \"Resources\", \"items\": [{\"name\": \"Help center\", \"href\": \"#help_center\"},{\"name\": \"Book a demo\", \"href\": \"#book_a_demo\"}, {\"name\": \"Server status\", \"href\": \"#server_status\"}, {\"name\": \"Blog\", \"href\": \"#blog\"}]}",
+  "footer.links.getInTouch": "{ \"title\": \"Get in touch\", \"feedback\": \"Questions or feedback?\", \"greeting\": \"We'd love to hear from you\"}",
+  "footer.alert": "By using this website, you understand the information being presented is provided for informational purposes only"
 }
