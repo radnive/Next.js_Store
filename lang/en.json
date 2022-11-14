@@ -22,6 +22,16 @@
   "settings.modal.languages.english": "English",
   "settings.modal.close": "Close",
 
+  "hero.caption": "Absolutely hot collections",
+  "hero.title.line1": "The best place to",
+  "hero.title.line2": "find and buy",
+  "hero.title.line3.word1": "Amazing",
+  "hero.title.line3.word2": "Product",
+  "hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut eum iste minima optio provident quam quisquam sed, sint veniam.",
+  "hero.button.explore": "Explore Now",
+  "hero.button.demo": "Request A Demo",
+  "hero.counters": "{\"collections\": {\"subtitle\": \"Collections\", \"count\": \"20k+\"}, \"users\": {\"subtitle\": \"Users\", \"count\": \"16k\"}}",
+
   "footer.developer": "Developed by Radnive",
   "footer.copyright": "Copyright (C) 2022, All rights reserved by STORE",
   "footer.termsOfService": "Terms of Service",

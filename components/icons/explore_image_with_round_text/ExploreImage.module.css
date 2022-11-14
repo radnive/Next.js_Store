@@ -1,0 +1,3 @@
+.explore_image path[data-vector-color=fill] {
+  fill: var(--onBackground);
+}

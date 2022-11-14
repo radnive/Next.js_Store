@@ -1,0 +1,7 @@
+.doodle_arrow path {
+  fill: var(--onBackground);
+}
+
+html[lang=fa] .doodle_arrow {
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,7 @@
+.main path[data-vector-color = fill] {
+  fill: var(--onBackground);
+}
+
+html[lang = fa] .main {
+  transform: rotateY(180deg);
+}

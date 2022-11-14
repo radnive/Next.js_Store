@@ -1,4 +1,5 @@
 import { useIntl } from 'react-intl';
+import Hero from '../components/hero/hero';
 import MainLayout from '../layouts/main/main_layout';
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
     <MainLayout
       title={intl.formatMessage({ id: 'app.name' })}
       description={intl.formatMessage({ id: 'app.description' })}>
+
+      <Hero />
 
     </MainLayout>
   );

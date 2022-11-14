@@ -1,0 +1,21 @@
+.counter {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    list-style-type: none;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--onBackground);
+  }
+
+  &__subtitle {
+    font-size: .75rem;
+    font-weight: 300;
+    color: var(--subtitle);
+  }
+}

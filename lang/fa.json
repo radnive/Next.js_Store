@@ -22,6 +22,16 @@
   "settings.modal.languages.english": "انگلیسی",
   "settings.modal.close": "بستن",
 
+  "hero.caption": "مجموعه های کاملا داغ",
+  "hero.title.line1": "بهترین مکان برای",
+  "hero.title.line2": "یافتن و خرید",
+  "hero.title.line3.word1": "بهترین ",
+  "hero.title.line3.word2": "محصولات",
+  "hero.subtitle": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، در روزنامه هاست.",
+  "hero.button.explore": "شروع کاوش",
+  "hero.button.demo": "درخواست نسخه نمایشی",
+  "hero.counters": "{\"collections\": {\"subtitle\": \"مجموعه ها\", \"count\": \"۲۰k+\"}, \"users\": {\"subtitle\": \"کاربران\", \"count\": \"۱۶k\"}}",
+
   "footer.developer": "توسعه یافته توسط رادنیو",
   "footer.copyright": "کپی رایت (C) 2022، کلیه حقوق متعلق به فروشگاه است",
   "footer.termsOfService": "شرایط استفاده از خدمات",
