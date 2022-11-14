@@ -1,0 +1,253 @@
+.settings_modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 902;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 1.5rem 0 2rem 0;
+  transform: translateY(100%);
+  background: var(--surface);
+
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 0 1.5rem;
+
+    h1 {
+      color: var(--onBackground);
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: var(--subtitle);
+      font-size: .75rem;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    max-height: 63vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  &__option_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2rem;
+
+    h4 {
+      color: var(--onBackground);
+      font-size: 1rem;
+    }
+
+    p {
+      color: var(--subtitle);
+      font-size: .75rem;
+    }
+  }
+
+  &__themes {
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+  }
+
+  &__theme_option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: .5rem;
+      object-fit: cover;
+      border: 2px solid #00d16a00;
+    }
+
+    p {
+      color: var(--onBackground);
+      font-size: .75rem;
+    }
+
+    &[data-selected = true] {
+      img {
+        border: 2px solid #00d16a;
+      }
+
+      p::before {
+        content: '✅ ';
+      }
+    }
+  }
+
+  &__languages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__language_options {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .3rem;
+    border-radius: .5rem;
+
+    p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5rem .75rem;
+      font-size: 1rem;
+      border-radius: .5rem;
+      cursor: pointer;
+
+      &[data-selected = true] {
+        background-color: #00d16a;
+        color: white;
+
+        &::after {
+          content: '✅';
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    padding: 0 1.5rem;
+
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: .5rem;
+      border-radius: .5rem;
+      background: var(--box);
+      border: none;
+    }
+  }
+
+  &__dark_bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    opacity: 0;
+    z-index: 901;
+    background: var(--dark_bg);
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .settings_modal {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    right: initial;
+    bottom: initial;
+    border-radius: 1rem;
+    transform: translateX(-50%) translateY(-50%) scale(.9);
+    opacity: 0;
+
+    &__languages {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__language_options {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      border-radius: .5rem;
+
+      p {
+        padding: .5rem 2rem;
+        font-size: .75rem;
+
+        &[data-selected = true] {
+          background-color: #00d16a;
+
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
+
+    &__buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 0 1.5rem;
+
+      button {
+        width: initial;
+        font-size: 1rem;
+        padding: .5rem 2rem;
+        border-radius: .5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .settings_modal {
+    width: initial;
+
+    &__header {
+      align-items: flex-start;
+      gap: .2rem;
+
+      p {
+        text-align: start;
+      }
+    }
+
+    &__main {
+      max-height: initial;
+      overflow: initial;
+    }
+
+    &__theme_option {
+      img {
+        width: 12rem;
+      }
+    }
+  }
+}
+
+@keyframes slide_up_animation {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show_animation {
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+}

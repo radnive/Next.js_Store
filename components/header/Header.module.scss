@@ -1,0 +1,239 @@
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  z-index: 900;
+  transition: box-shadow .5s;
+  box-shadow: #12121200 0 0 0 0, #12121200 0 0 0 0;
+
+  &____shadow {
+    box-shadow: #12121219 0 20px 25px -5px, #1212120A 0 10px 10px -5px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top_section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: all .5s;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+
+    li {
+      position: relative;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  &__accessibility {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  &__search_box {
+    min-width: 168px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    font-size: .75rem;
+    background: var(--box);
+    color: var(--subtitle);
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      fill: var(--subtitle);
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    background: var(--divider);
+  }
+
+  &__user_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 4rem;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  &__settings {
+    padding: .5rem;
+    border-radius: .5rem;
+    background: var(--box);
+
+    svg {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: var(--onBackground);
+    }
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .header {
+    &__logo {
+      font-size: 1.75rem;
+    }
+
+    &__links li {
+      font-size: 2.2rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .header {
+    &____shadow {
+      box-shadow: none;
+    }
+
+    &__main {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: normal;
+      padding: 1rem 0;
+    }
+
+    &__top_section {
+      width: initial;
+      display: block;
+      padding: 0;
+    }
+
+    &__logo {
+      font-size: 2rem;
+    }
+
+    &__menu {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-height: unset;
+
+      // When user change view from Mobile/Tablet to Desktop
+      margin: 0 !important;
+    }
+
+    &__links {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
+      li {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: normal;
+        text-transform: capitalize;
+        color: var(--subtitle);
+        transition: color .2s;
+
+        &:hover {
+          color: var(--onBackground);
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    &__accessibility {
+      width: initial;
+      margin-top: 0;
+    }
+
+    &__divider {
+      height: 2rem;
+      width: 2px;
+    }
+
+    &__user_info {
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        li:first-child {
+          width: max-content;
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--onBackground);
+        }
+
+        li:last-child {
+          width: max-content;
+          font-size: .75rem;
+          color: var(--subtitle);
+        }
+      }
+    }
+
+    &__settings svg {
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

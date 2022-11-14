@@ -1,0 +1,18 @@
+.menu_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu_button__bar {
+  width: 1.5rem;
+  height: 3px;
+  background: var(--onBackground);
+}
+
+@media only screen and (min-width: 920px) {
+  .menu_button {
+    display: none;
+  }
+}/*# sourceMappingURL=MenuButton.module.css.map */

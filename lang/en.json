@@ -1,3 +1,24 @@
 {
-  "app.name": "Store"
+  "app.name": "Store",
+  "app.description": "The best place to find and buy amazing products",
+
+  "header.menu_item.home": "Home",
+  "header.menu_item.collections": "Collections",
+  "header.menu_item.brands": "Brands",
+  "header.menu_item.new": "New",
+  "header.menu_item.sales": "Sales",
+  "header.search": "Search",
+
+  "settings.modal.title": "Settings",
+  "settings.modal.subtitle": "Change how website UI looks and feels in your browser!",
+  "settings.modal.themes.title": "Interface theme",
+  "settings.modal.themes.subtitle": "Select or customize your UI theme.",
+  "settings.modal.themes.system": "System",
+  "settings.modal.themes.light": "Light",
+  "settings.modal.themes.dark": "Dark",
+  "settings.modal.languages.title": "Language",
+  "settings.modal.languages.subtitle": "Select your preferred language for website.",
+  "settings.modal.languages.persian": "Persian",
+  "settings.modal.languages.english": "English",
+  "settings.modal.close": "Close"
 }

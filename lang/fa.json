@@ -1,3 +1,24 @@
 {
-  "app.name": "فروشگاه"
+  "app.name": "فروشگاه",
+  "app.description": "بهترین مکان برای یافتن و خرید کالاهای شگفت انگیز",
+
+  "header.menu_item.home": "خانه",
+  "header.menu_item.collections": "مجموعه ها",
+  "header.menu_item.brands": "بند ها",
+  "header.menu_item.new": "جدید",
+  "header.menu_item.sales": "حراج",
+  "header.search": "جستجو",
+
+  "settings.modal.title": "تنظیمات",
+  "settings.modal.subtitle": "ظاهر رابط کاربری وبسایت رو به سلیقه خودت تغییر بده!",
+  "settings.modal.themes.title": "ظاهر رابط کاربری",
+  "settings.modal.themes.subtitle": "ظاهر رابط کاربری را انتخاب یا سفارشی کن.",
+  "settings.modal.themes.system": "سیستم",
+  "settings.modal.themes.light": "روشن",
+  "settings.modal.themes.dark": "تاریک",
+  "settings.modal.languages.title": "زبان",
+  "settings.modal.languages.subtitle": "زبان مورد نظر خودت برای وب سایت انتخاب کن.",
+  "settings.modal.languages.persian": "پارسی",
+  "settings.modal.languages.english": "انگلیسی",
+  "settings.modal.close": "بستن"
 }
