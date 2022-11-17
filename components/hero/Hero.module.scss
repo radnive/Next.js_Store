@@ -117,7 +117,6 @@
     opacity: 0;
 
     & > img {
-      content: url('/images/hero_image_en.png');
       width: 100%;
     }
 
@@ -136,15 +135,9 @@
 }
 
 html[lang = fa] {
-  .hero__picture {
-    & > img {
-      content: url('/images/hero_image_fa.png');
-    }
-
-    &__explore {
-      left: unset;
-      right: 1rem;
-    }
+  .hero__picture__explore {
+    left: unset;
+    right: 1rem;
   }
 }
 

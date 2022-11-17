@@ -112,7 +112,7 @@ const Hero: FC = () => {
       </div>
 
       <div ref={picRef} className={styles.hero__picture}>
-        <img alt='Hero Image' />
+        <img src={`/images/hero_image_${intl.locale}.png`} alt='Hero Image' />
 
         <div className={styles.hero__picture__explore}>
           <ExploreImageWithRoundText />
