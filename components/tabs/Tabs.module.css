@@ -1,0 +1,32 @@
+.tabs {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+.tabs li {
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.tabs li[data-tab-status=selected] {
+  color: var(--onPrimary);
+  background-color: var(--primary);
+  transition: background-color 0.5s;
+}
+.tabs li[data-tab-status=normal] {
+  background-color: var(--background);
+  color: var(--onBackground);
+  transition: background-color 0.5s;
+}
+.tabs li[data-tab-status=normal]:hover {
+  background-color: var(--box);
+}
+
+@media only screen and (min-width: 920px) {
+  .tabs {
+    display: flex;
+  }
+}/*# sourceMappingURL=Tabs.module.css.map */

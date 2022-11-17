@@ -1,0 +1,23 @@
+.progress_svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: rotate_animation 1s cubic-bezier(0.79, 0.14, 0.15, 0.86) infinite;
+
+  [data-vector-type = background] {
+    fill: var(--onBackground);
+  }
+
+  [data-vector-type = progress] {
+    stroke: var(--onBackground);
+  }
+}
+
+@keyframes rotate_animation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

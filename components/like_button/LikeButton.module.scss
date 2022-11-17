@@ -1,0 +1,15 @@
+.like_button {
+  padding: .75rem;
+  border-radius: 3rem;
+  background: var(--background);
+
+  svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    path[data-vector-color = stroke] {
+      fill: var(--subtitle);
+    }
+  }
+}

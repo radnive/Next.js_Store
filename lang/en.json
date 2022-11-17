@@ -32,6 +32,24 @@
   "hero.button.demo": "Request A Demo",
   "hero.counters": "{\"collections\": {\"subtitle\": \"Collections\", \"count\": \"20k+\"}, \"users\": {\"subtitle\": \"Users\", \"count\": \"16k\"}}",
 
+  "products.explore.title.word1": "Exclusive",
+  "products.explore.title.word2": "Products",
+  "products.explore.subtitle": "Search for the latest fashion articles and find amazing products to buy from our huge collection",
+  "products.explore.searchbox.placeholder": "Search products",
+  "products.explore.searchbox.exploreButton": "Explore Now",
+  "products.explore.filters": "Filters",
+  "products.explore.dropdown.placeholder": "Select a category",
+  "products.explore.categories": "[{\"id\": \"everything\", \"name\": \"Everything\"}, {\"id\": \"popular\", \"name\": \"Popular\"}, {\"id\": \"hot\", \"name\": \"Hot\"}, {\"id\": \"recent\", \"name\": \"Recent\"}, {\"id\": \"products\", \"name\": \"Products\"}, {\"id\": \"work\", \"name\": \"Work\"}]",
+
+  "empty.list.message.title": "No products were found!",
+  "empty.list.message.subtitle": "You may have entered the product name or feature incorrectly.",
+
+  "loadmore.button.normal": "Load more products",
+  "loadmore.button.loadingData": "Loading data...",
+  "loadmore.button.loadingMore": "Loading more...",
+  "loadmore.button.endOfList": "You've reached to end of the list!",
+  "loadmore.button.error": "Something went wrong. Retry?",
+
   "footer.developer": "Developed by Radnive",
   "footer.copyright": "Copyright (C) 2022, All rights reserved by STORE",
   "footer.termsOfService": "Terms of Service",

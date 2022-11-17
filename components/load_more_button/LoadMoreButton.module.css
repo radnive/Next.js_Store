@@ -1,0 +1,39 @@
+.load_more_button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.load_more_button p {
+  line-height: 1.5rem;
+}
+.load_more_button__loading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+.load_more_button:focus, .load_more_button:focus-visible, .load_more_button:focus-within {
+  outline: none;
+}
+.load_more_button[data-button-state=normal] {
+  background: var(--box);
+  color: var(--onBackground);
+}
+.load_more_button[data-button-state=normal]:hover {
+  background: var(--box__hovered);
+}
+.load_more_button[data-button-state=error] {
+  background: var(--error);
+  color: var(--onAlert);
+}
+.load_more_button[data-button-state=error]:hover {
+  background: var(--error__hovered);
+}/*# sourceMappingURL=LoadMoreButton.module.css.map */

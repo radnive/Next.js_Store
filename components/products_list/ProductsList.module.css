@@ -1,0 +1,25 @@
+.products_list {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .products_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    row-gap: 2rem;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .products_list {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    row-gap: 3rem;
+  }
+}/*# sourceMappingURL=ProductsList.module.css.map */

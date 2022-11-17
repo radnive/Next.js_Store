@@ -1,0 +1,107 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+.lottie_container {
+  width: 20rem;
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) forwards;
+          animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) forwards;
+}
+
+.lottie {
+  width: 18rem;
+  height: 18rem;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+.message__title {
+  color: var(--onBackground);
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0;
+  -webkit-animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 0.2s forwards;
+          animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 0.2s forwards;
+}
+.message__subtitle {
+  color: var(--subtitle);
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 0.3s forwards;
+          animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 0.3s forwards;
+}
+
+@media only screen and (min-width: 680px) {
+  .main {
+    margin-top: 3rem;
+    margin-bottom: 12rem;
+  }
+  .lottie_container {
+    width: 27rem;
+    height: 20rem;
+  }
+  .lottie {
+    width: 27rem;
+    height: 27rem;
+  }
+  .message__title {
+    font-size: 1.7rem;
+  }
+  .message__subtitle {
+    color: var(--subtitle);
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .lottie_container {
+    width: 32rem;
+    height: 22rem;
+  }
+  .lottie {
+    width: 32rem;
+    height: 32rem;
+  }
+  .message__title {
+    font-size: 2rem;
+  }
+  .message__subtitle {
+    font-size: 1rem;
+  }
+}
+@-webkit-keyframes pumbUpAnim {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pumbUpAnim {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=EmptyList.module.css.map */

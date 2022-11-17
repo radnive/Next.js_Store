@@ -32,6 +32,24 @@
   "hero.button.demo": "درخواست نسخه نمایشی",
   "hero.counters": "{\"collections\": {\"subtitle\": \"مجموعه ها\", \"count\": \"۲۰k+\"}, \"users\": {\"subtitle\": \"کاربران\", \"count\": \"۱۶k\"}}",
 
+  "products.explore.title.word1": "محصولات",
+  "products.explore.title.word2": "انحصاری",
+  "products.explore.subtitle": "جدیدترین مقالات مد رو جستجو کن و محصولات شگفت انگیزی رو برای خرید از مجموعه عظیم ما پیدا کن",
+  "products.explore.searchbox.placeholder": "جستجو بین محصولات'",
+  "products.explore.searchbox.exploreButton": "شروع کاوش",
+  "products.explore.filters": "فیلتر ها",
+  "products.explore.dropdown.placeholder": "یک دسته بندی انتخاب کن",
+  "products.explore.categories": "[{\"id\": \"everything\", \"name\": \"همه نوع کالا\"}, {\"id\": \"popular\", \"name\": \"پربازدید\"}, {\"id\": \"hot\", \"name\": \"داغ\"}, {\"id\": \"recent\", \"name\": \"جدیدترین\"}, {\"id\": \"products\", \"name\": \"محصولات\"}, {\"id\": \"work\", \"name\": \"کار\"}]",
+
+  "empty.list.message.title": "هیچ کالایی پیدا نشد!",
+  "empty.list.message.subtitle": "ممکن است ویژگی یا نام کالا را اشتباه وارد کرده باشید.",
+
+  "loadmore.button.normal": "بارگذاری محصولات بیشتر",
+  "loadmore.button.loadingData": "در حال بارگذاری...",
+  "loadmore.button.loadingMore": "در حال بارگذاری...",
+  "loadmore.button.endOfList": "شما به انتهای لیست رسیده اید!",
+  "loadmore.button.error": "یه مشکلی اومده. دوباره؟",
+
   "footer.developer": "توسعه یافته توسط رادنیو",
   "footer.copyright": "کپی رایت (C) 2022، کلیه حقوق متعلق به فروشگاه است",
   "footer.termsOfService": "شرایط استفاده از خدمات",

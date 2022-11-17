@@ -1,0 +1,37 @@
+.tabs {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+
+  li {
+    font-size: .9rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+  }
+
+  li[data-tab-status = selected] {
+    color: var(--onPrimary);
+    background-color: var(--primary);
+    transition: background-color .5s;
+  }
+
+  li[data-tab-status = normal] {
+    background-color: var(--background);
+    color: var(--onBackground);
+    transition: background-color .5s;
+
+    &:hover {
+      background-color: var(--box);
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .tabs {
+    display: flex;
+  }
+}
+

@@ -1,0 +1,7 @@
+.main {
+  transition: transform .3s;
+}
+
+.main path {
+  fill: var(--onBackground);
+}

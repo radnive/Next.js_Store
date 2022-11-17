@@ -1,0 +1,44 @@
+.load_more_button {
+  width: max-content;
+  max-width: 100%;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: background-color .3s;
+
+  p {
+    line-height: 1.5rem;
+  }
+
+  &__loading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style-type: none;
+  }
+
+  &:focus, &:focus-visible, &:focus-within {
+    outline: none;
+  }
+
+  &[data-button-state = normal] {
+    background: var(--box);
+    color: var(--onBackground);
+
+    &:hover {
+      background: var(--box__hovered);
+    }
+  }
+
+  &[data-button-state = error] {
+    background: var(--error);
+    color: var(--onAlert);
+
+    &:hover {
+      background: var(--error__hovered);
+    }
+  }
+}
