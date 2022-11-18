@@ -44,6 +44,10 @@
   "empty.list.message.title": "هیچ کالایی پیدا نشد!",
   "empty.list.message.subtitle": "ممکن است ویژگی یا نام کالا را اشتباه وارد کرده باشید.",
 
+  "404.page.message.title": "اوووه!",
+  "404.page.message.subtitle": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون.",
+  "404.page.button.back": "برو به خانه",
+
   "loadmore.button.normal": "بارگذاری محصولات بیشتر",
   "loadmore.button.loadingData": "در حال بارگذاری...",
   "loadmore.button.loadingMore": "در حال بارگذاری...",

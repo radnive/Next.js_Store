@@ -44,6 +44,10 @@
   "empty.list.message.title": "No products were found!",
   "empty.list.message.subtitle": "You may have entered the product name or feature incorrectly.",
 
+  "404.page.message.title": "Oops!",
+  "404.page.message.subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eaque tempore, accusamus iste cumque.",
+  "404.page.button.back": "Take me home",
+
   "loadmore.button.normal": "Load more products",
   "loadmore.button.loadingData": "Loading data...",
   "loadmore.button.loadingMore": "Loading more...",
