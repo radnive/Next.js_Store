@@ -102,6 +102,7 @@
   right: 0;
   background: var(--background);
   border-top: 1px solid var(--divider);
+  z-index: 6;
 
   &__purchase {
     width: 100%;

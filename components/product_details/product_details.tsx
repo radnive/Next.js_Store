@@ -73,7 +73,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
 
           <div className={styles.buttons}>
             <button className={styles.buttons__purchase}>
-              { intl.formatMessage({ id: 'product.details.button.purchase' }) }
+              { intl.formatMessage({ id: 'button.purchase.text' }) }
               <b>${ product.price }</b>
             </button>
 

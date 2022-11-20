@@ -1,5 +1,7 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import ProductDetails from "../../components/product_details/product_details";
+import ProductSpecifications from "../../components/product_specifications/product_specifications";
+import Spacer from "../../components/spacer/spacer";
 import MainLayout from "../../layouts/main/main_layout";
 import { ProductInfo } from "../../models/product";
 import My404Page from "../404";
@@ -37,6 +39,15 @@ const ProductInfo: NextPage<ProductInfoProps> = ({product, isValid}) => {
           name: p.name,
           price: p.price,
           ...p.details
+        }} />
+
+        <Spacer height="1rem" />
+
+        <ProductSpecifications product={{
+          id: p.id,
+          name: p.name,
+          price: p.price,
+          ...p.specifications
         }} />
       </MainLayout>
     );

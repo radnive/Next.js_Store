@@ -55,13 +55,15 @@
   "loadmore.button.error": "یه مشکلی اومده. دوباره؟",
 
   "product.details.home": "خونه",
-  "product.details.button.purchase": "اضافه کردن به سبد با ",
-
-  "button.share.text": "اشتراک گذاری",
-  "button.share.copied": "لینک کپی شد",
-
+  
   "selector.color.title": "رنگ بندی:",
   "selector.size.title": "اندازه:",
+
+  "button.purchase.text": "اضافه کردن به سبد با ",
+  "button.share.text": "اشتراک گذاری",
+  "button.share.copied": "لینک کپی شد",
+  "button.show.more": "نمایش اطلاعات بیشتر",
+  "button.show.less": "نمایش اطلاعات کمتر",
 
   "footer.developer": "توسعه یافته توسط رادنیو",
   "footer.copyright": "کپی رایت (C) 2022، کلیه حقوق متعلق به فروشگاه است",

@@ -55,13 +55,15 @@
   "loadmore.button.error": "Something went wrong. Retry?",
 
   "product.details.home": "Home",
-  "product.details.button.purchase": "Add to cart for ",
-
+  
   "selector.color.title": "Colors:",
   "selector.size.title": "Sizes:",
-
+  
+  "button.purchase.text": "Add to cart for ",
   "button.share.text": "Share",
   "button.share.copied": "Copied",
+  "button.show.more": "Show more details",
+  "button.show.less": "Show less details",
 
   "footer.developer": "Developed by Radnive",
   "footer.copyright": "Copyright (C) 2022, All rights reserved by STORE",
