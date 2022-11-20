@@ -2,6 +2,7 @@ import styles from './ProductItem.module.css';
 import { FC } from "react";
 import LikeButton from "../like_button/like_button";
 import { ProductBrief } from '../../models/product';
+import Link from 'next/link';
 
 interface ProductItemProps {
   product: ProductBrief
@@ -11,16 +12,18 @@ const ProductItem: FC<ProductItemProps> = ({product}) => {
   return (
     <article className={styles.product_item}>
       <div className={styles.product_item__header}>
-        <div className={`${styles.product_item__image} ${styles.box}`}>
-          <img src={product.image} alt={product.name} />
-        </div>
+        <Link href={`/product/${product.id}`}> 
+          <div className={`${styles.product_item__image} ${styles.box}`}>
+            <img src={product.image} alt={product.name} />
+          </div>
+        </Link>
         <p className={styles.product_item__category}>{product.category}</p>
-        <LikeButton customClass={styles.product_item__favorite} liked={product.isFavorite} />
+        <LikeButton className={styles.product_item__favorite} liked={product.isFavorite} />
       </div>
 
       <div className={styles.product_item__info}>
         <ul>
-          <li>{product.name}</li>
+          <li><Link href={`/product/${product.id}`}>{product.name}</Link></li>
           <li>{product.brand}</li>
         </ul>
 

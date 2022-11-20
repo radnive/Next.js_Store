@@ -54,6 +54,15 @@
   "loadmore.button.endOfList": "شما به انتهای لیست رسیده اید!",
   "loadmore.button.error": "یه مشکلی اومده. دوباره؟",
 
+  "product.details.home": "خونه",
+  "product.details.button.purchase": "اضافه کردن به سبد با ",
+
+  "button.share.text": "اشتراک گذاری",
+  "button.share.copied": "لینک کپی شد",
+
+  "selector.color.title": "رنگ بندی:",
+  "selector.size.title": "اندازه:",
+
   "footer.developer": "توسعه یافته توسط رادنیو",
   "footer.copyright": "کپی رایت (C) 2022، کلیه حقوق متعلق به فروشگاه است",
   "footer.termsOfService": "شرایط استفاده از خدمات",

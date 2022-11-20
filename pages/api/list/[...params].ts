@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { allProducts, ApiResponse, sliceArray } from '../../../models/products_list';
+import { allProducts, ApiResponse, sliceArray, summarize } from '../../../models/products_list';
 
 export default function handler(
   req: NextApiRequest,
@@ -16,13 +16,13 @@ export default function handler(
       switch (category) {
 
         case 'everything': {
-          setTimeout(() => res.status(200).send(sliceArray(allProducts, pageIndex)), 3000);
+          res.status(200).send(sliceArray(allProducts, pageIndex));
           break;
         }
 
         default: {
-          const filterCategory = allProducts.filter((p) => p.type.includes(category));
-          setTimeout(() => res.status(200).send(sliceArray(filterCategory, pageIndex)), 3000);
+          const filterCategory = allProducts.filter((p) => p.types.includes(category));
+          res.status(200).send(sliceArray(filterCategory, pageIndex));
           break;
         }
 
@@ -30,11 +30,11 @@ export default function handler(
       
     } else {
       // Send error message.
-      setTimeout(() => res.status(404).send({ message: 'url is not valid :(' }), 3000);
+      res.status(404).send({ message: 'url is not valid :(' });
     }
 
   } else {
     // Send error message.
-    setTimeout(() => res.status(404).send({ message: 'url is not valid :(' }), 3000);
+    res.status(404).send({ message: 'url is not valid :(' });
   }
 }

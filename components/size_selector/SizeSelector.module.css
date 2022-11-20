@@ -1,0 +1,32 @@
+.title {
+  font-size: 1rem;
+  color: var(--onBackground);
+  margin-bottom: 1rem;
+}
+
+.sizes_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1rem;
+}
+.sizes_list li {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--divider);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.sizes_list li[data-style=selected] {
+  color: var(--background);
+  background: var(--onBackground);
+}
+.sizes_list li[data-style=normal] {
+  color: var(--onBackground);
+  background: var(--background);
+}
+.sizes_list li[data-style=normal]:hover {
+  background: var(--box);
+}/*# sourceMappingURL=SizeSelector.module.css.map */

@@ -16,19 +16,19 @@ export default function handler(
 
       const searchResult = allProducts.filter(p =>
         p.name.toLowerCase().includes(query)
-        || p.brand.toLowerCase().includes(query)
-        || p.category.toLowerCase().includes(query)
+        || p.details.brand.toLowerCase().includes(query)
+        || p.details.category.toLowerCase().includes(query)
       );
 
-      setTimeout(() => res.status(200).send(sliceArray(searchResult, pageIndex)), 3000);
+      res.status(200).send(sliceArray(searchResult, pageIndex));
 
     } else {
       // Send error message.
-      setTimeout(() => res.status(404).send({ message: 'url is not valid :(' }), 3000);
+      res.status(404).send({ message: 'url is not valid :(' });
     }
   
   } else {
     // Send error message.
-    setTimeout(() => res.status(404).send({ message: 'url is not valid :(' }), 3000);
+    res.status(404).send({ message: 'url is not valid :(' });
   }
 }
