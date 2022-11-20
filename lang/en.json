@@ -55,6 +55,9 @@
   "loadmore.button.error": "Something went wrong. Retry?",
 
   "product.details.home": "Home",
+
+  "product.similar.title": "Similar products in ",
+  "product.similar.link.seeMore": "See more >",
   
   "selector.color.title": "Colors:",
   "selector.size.title": "Sizes:",

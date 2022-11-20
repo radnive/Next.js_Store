@@ -1,6 +1,7 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import ProductDetails from "../../components/product_details/product_details";
 import ProductSpecifications from "../../components/product_specifications/product_specifications";
+import SimilarProducts from "../../components/similar_products/similar_products";
 import Spacer from "../../components/spacer/spacer";
 import MainLayout from "../../layouts/main/main_layout";
 import { ProductInfo } from "../../models/product";
@@ -49,6 +50,10 @@ const ProductInfo: NextPage<ProductInfoProps> = ({product, isValid}) => {
           price: p.price,
           ...p.specifications
         }} />
+
+        <Spacer height="1rem" />
+
+        <SimilarProducts category={p.details.category} products={p.similar} />
       </MainLayout>
     );
   } else {

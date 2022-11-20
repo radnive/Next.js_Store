@@ -31,7 +31,7 @@ export default function handler(
     const product = filteredProducts[0];
     product.specifications = sampleSpecifications;
     product.similar = allProducts
-      .filter(p => p.details.category === product.details.category)
+      .filter(p => p.id != product.id && p.details.category === product.details.category)
       .map(p => summarize(p))
       .sort(() => (Math.random() * 10) - 5) // Shuffle array
       .slice(0, 4);
