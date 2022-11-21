@@ -39,47 +39,49 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
           <FullScreenButton src={product.image} className={styles.full_screen_button} lang={intl.locale} />
       </div>
 
-      <div className={styles.details}>
-        <header>
-          <ul className={styles.details__direction}>
-            <li className={styles.details__direction__link}>
-              <Link href='/'>{ intl.formatMessage({ id: 'product.details.home' }) }</Link>
-            </li>
+      <div className={styles.details_container}>
+        <div className={styles.details}>
+          <header>
+            <ul className={styles.details__direction}>
+              <li className={styles.details__direction__link}>
+                <Link href='/'>{ intl.formatMessage({ id: 'product.details.home' }) }</Link>
+              </li>
 
-            <li>{'>'}</li>
+              <li>{'>'}</li>
 
-            <li className={styles.details__direction__link}>{ product.category }</li>
+              <li className={styles.details__direction__link}>{ product.category }</li>
 
-            <li>{'>'}</li>
+              <li>{'>'}</li>
 
-            <li className={styles.details__direction__link}>{ product.brand }</li>
-          </ul>
+              <li className={styles.details__direction__link}>{ product.brand }</li>
+            </ul>
 
-          <h1 className={styles.details__name}>{product.name}</h1>
-        </header>
+            <h1 className={styles.details__name}>{product.name}</h1>
+          </header>
 
-        <footer>
-          <ColorSelector colors={product.colors} />
+          <footer>
+            <ColorSelector colors={product.colors} />
 
-          {
-            (product.sizes.length > 0)?
-            (
-              <>
-                <Spacer height='2rem' />
-                <SizeSelector sizes={product.sizes} />
-              </>
-            ) : ''
-          }
+            {
+              (product.sizes.length > 0)?
+              (
+                <>
+                  <Spacer height='2rem' />
+                  <SizeSelector sizes={product.sizes} />
+                </>
+              ) : ''
+            }
 
-          <div className={styles.buttons}>
-            <button className={styles.buttons__purchase}>
-              { intl.formatMessage({ id: 'button.purchase.text' }) }
-              <b>${ product.price }</b>
-            </button>
+            <div className={styles.buttons}>
+              <button className={styles.buttons__purchase}>
+                { intl.formatMessage({ id: 'button.purchase.text' }) }
+                <b>${ product.price }</b>
+              </button>
 
-            <LikeButton className={styles.buttons__like_button} liked={product.isFavorite} />
-          </div>
-        </footer>
+              <LikeButton className={styles.buttons__like_button} liked={product.isFavorite} />
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
   );
