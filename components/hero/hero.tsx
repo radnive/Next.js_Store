@@ -6,6 +6,7 @@ import DemoIcon from "../icons/demo_icon/demo_icon";
 import CounterItem from "../counter/counter";
 import { gsap } from 'gsap';
 import ExploreImageWithRoundText from '../icons/explore_image_with_round_text/explore_image_with_round_text';
+import { TLink } from '../transition/transition';
 
 const Hero: FC = () => {
   const intl = useIntl();
@@ -76,9 +77,9 @@ const Hero: FC = () => {
         </p>
 
         <div className={`${styles.hero__buttons} hero__intro--anim`}>
-          <button className={styles.hero__explore_button}>
+          <TLink href='/#search_section' className={styles.hero__explore_button}>
             { intl.formatMessage({ id: 'hero.button.explore' }) }
-          </button>
+          </TLink>
 
           <div className={styles.hero__demo_button}>
             <DemoIcon />
