@@ -53,7 +53,12 @@ const ProductInfo: NextPage<ProductInfoProps> = ({product, isValid}) => {
 
         <Spacer height="1rem" />
 
-        <SimilarProducts category={p.details.category} products={p.similar} />
+        {
+          (p.similar.length > 0)?
+            <SimilarProducts category={p.details.category} products={p.similar} />
+          :
+            <></>
+        }
       </MainLayout>
     );
   } else {
