@@ -35,7 +35,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     opacity: 0;
-    animation: pumbUpAnim 1s cubic-bezier(1,-0.29,0,1.43) .2s forwards;
+    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) .2s forwards;
   }
 
   &__subtitle {
@@ -43,7 +43,7 @@
     font-size: 1rem;
     text-align: center;
     opacity: 0;
-    animation: pumbUpAnim 1s cubic-bezier(1,-0.29,0,1.43) .3s forwards;
+    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) .3s forwards;
   }
 }
 
@@ -108,5 +108,17 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes slideUpAnim {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
