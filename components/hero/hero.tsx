@@ -26,32 +26,28 @@ const Hero: FC = () => {
   useEffect(() => {
     const q = gsap.utils.selector(introRef.current);
 
-    if (introRef.current) {
-      gsap.fromTo(q('.hero__intro--anim'), {
-        y: '5rem',
-        opacity: 0,
-      }, {
-        y: 0,
-        opacity: 1,
-        delay: 3,
-        duration: .5,
-        stagger: .1,
-        ease: 'power2.out'
-      });
-    }
+    gsap.fromTo(q('.hero__intro--anim'), {
+      y: '5rem',
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      delay: 3,
+      duration: .5,
+      stagger: .1,
+      ease: 'power2.out'
+    });
 
-    if (picRef.current) {
-      gsap.fromTo(picRef.current, {
-        y: '5rem',
-        opacity: 0,
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 3
-      })
-    }
-  });
+    gsap.fromTo(picRef.current, {
+      y: '5rem',
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      delay: 3
+    });
+  }, [introRef]);
 
   return (
     <section className={styles.hero}>
