@@ -30,7 +30,7 @@ const Footer: FC = () => {
       <div className={styles.footer__main}>
         <div className={styles.footer__title}>
           <TLink href='/'>
-            <h1>{ intl.formatMessage({ id: 'app.name' }) }</h1>
+            <p>{ intl.formatMessage({ id: 'app.name' }) }</p>
           </TLink>
           
           <ul>

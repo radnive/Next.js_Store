@@ -152,11 +152,12 @@ export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick
   return (
     <div
       className={className}
+      style={{ cursor: 'pointer' }}
       onClick={handleClick}
       onMouseEnter={() => anchorRef.current?.focus()}
       onMouseLeave={() => anchorRef.current?.blur()}>
         {children}
-        <a ref={anchorRef} href={href} style={{ display: 'none' }} />
+        <a ref={anchorRef} href={href} style={{ scale: 0, opacity: 0 }} />
     </div>
   );
 }
