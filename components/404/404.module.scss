@@ -9,7 +9,8 @@
 .lottie {
   width: 16rem;
   height: 16rem;
-  animation: pumbUpAnim 1s cubic-bezier(1,-0.29,0,1.43) forwards;
+  transform: scale(0);
+  animation: pumbUpAnim 1s cubic-bezier(1,-0.29,0,1.43) 3s forwards;
 }
 
 .message {
@@ -25,7 +26,7 @@
     color: var(--onBackground);
     text-align: center;
     opacity: 0;
-    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) .5s forwards;
+    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) 3.5s forwards;
   }
 
   &__subtitle {
@@ -35,7 +36,7 @@
     margin-top: .5rem;
     text-align: center;
     opacity: 0;
-    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) .6s forwards;
+    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) 3.6s forwards;
   }
 
   &__back_home {
@@ -46,7 +47,7 @@
     border-radius: .5rem;
     transition: all .1s;
     opacity: 0;
-    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) .7s forwards;
+    animation: slideUpAnim 1s cubic-bezier(0, 0, 0, 1) 3.7s forwards;
 
     &:hover {
       background: var(--onBackground);

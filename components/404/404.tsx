@@ -3,7 +3,7 @@ import Lottie from 'react-lottie-player';
 import styles from './404.module.css';
 import lottieAnimation from '../../public/lottie/404.json';
 import { useIntl } from 'react-intl';
-import Link from 'next/link';
+import { TLink } from '../transition/transition';
 
 const Error404: FC = () => {
   const intl = useIntl();
@@ -29,9 +29,9 @@ const Error404: FC = () => {
           </p>
         </li>
         <li>
-          <Link href='/' className={styles.message__back_home}>
+          <TLink href='/' className={styles.message__back_home}>
             { intl.formatMessage({ id: '404.page.button.back' }) }
-          </Link>
+          </TLink>
         </li>
       </ul>
     </div>
