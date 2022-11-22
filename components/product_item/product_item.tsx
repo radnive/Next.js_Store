@@ -2,7 +2,7 @@ import styles from './ProductItem.module.css';
 import { FC } from "react";
 import LikeButton from "../like_button/like_button";
 import { ProductBrief } from '../../models/product';
-import Link from 'next/link';
+import { TLink } from '../transition/transition';
 
 interface ProductItemProps {
   product: ProductBrief
@@ -12,18 +12,18 @@ const ProductItem: FC<ProductItemProps> = ({product}) => {
   return (
     <article className={styles.product_item}>
       <div className={styles.product_item__header}>
-        <Link href={`/product/${product.id}`}> 
+        <TLink href={`/product/${product.id}`}> 
           <div className={`${styles.product_item__image} ${styles.box}`}>
             <img src={product.image} alt={product.name} />
           </div>
-        </Link>
+        </TLink>
         <p className={styles.product_item__category}>{product.category}</p>
         <LikeButton className={styles.product_item__favorite} liked={product.isFavorite} />
       </div>
 
       <div className={styles.product_item__info}>
         <ul>
-          <li><Link href={`/product/${product.id}`}>{product.name}</Link></li>
+          <li><TLink href={`/product/${product.id}`}>{product.name}</TLink></li>
           <li>{product.brand}</li>
         </ul>
 

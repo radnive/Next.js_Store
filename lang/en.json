@@ -1,6 +1,7 @@
 {
   "app.name": "Store",
   "app.description": "The best place to find and buy amazing products",
+  "app.domain.suffix": ".com",
 
   "header.menu_item.home": "Home",
   "header.menu_item.collections": "Collections",

@@ -1,6 +1,7 @@
 {
   "app.name": "فروشگاه",
   "app.description": "بهترین مکان برای یافتن و خرید کالاهای شگفت انگیز",
+  "app.domain.suffix": ".کام",
 
   "header.menu_item.home": "خانه",
   "header.menu_item.collections": "مجموعه ها",

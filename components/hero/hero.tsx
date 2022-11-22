@@ -5,10 +5,7 @@ import DoodleArrow from "../icons/doodle_arrow/doodle_arrow";
 import DemoIcon from "../icons/demo_icon/demo_icon";
 import CounterItem from "../counter/counter";
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ExploreImageWithRoundText from '../icons/explore_image_with_round_text/explore_image_with_round_text';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero: FC = () => {
   const intl = useIntl();
@@ -36,7 +33,7 @@ const Hero: FC = () => {
       }, {
         y: 0,
         opacity: 1,
-        delay: .3,
+        delay: 3,
         duration: .5,
         stagger: .1,
         ease: 'power2.out'
@@ -51,11 +48,7 @@ const Hero: FC = () => {
         y: 0,
         opacity: 1,
         duration: 1,
-        scrollTrigger: {
-          trigger: picRef.current,
-          start: 'top 90%',
-          toggleActions: 'play resume resume resume'
-        }
+        delay: 3
       })
     }
   });

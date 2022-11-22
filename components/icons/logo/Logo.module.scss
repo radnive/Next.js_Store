@@ -1,0 +1,13 @@
+.main {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+
+  circle {
+    fill: var(--onBackground);
+  }
+
+  path {
+    fill: var(--transtionBarColor);
+    stroke:var(--transtionBarColor);
+  }
+}

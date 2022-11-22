@@ -1,0 +1,11 @@
+.main {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+.main circle {
+  fill: var(--onBackground);
+}
+.main path {
+  fill: var(--transtionBarColor);
+  stroke: var(--transtionBarColor);
+}/*# sourceMappingURL=Logo.module.css.map */

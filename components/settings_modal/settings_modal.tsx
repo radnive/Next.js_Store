@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { gsap } from 'gsap';
 import { useTheme } from "next-themes";
 import { useIntl } from 'react-intl';
-import Link from "next/link";
+import { TLink } from '../transition/transition';
 
 interface SettingsModalProps {
   afterClose?: () => void
@@ -110,12 +110,12 @@ const SettingsModal: FC<SettingsModalProps> = ({afterClose}) => {
             </div>
 
             <div className={styles.settings_modal__language_options}>
-              <Link href={asPath} locale='fa'>
+              <TLink href={asPath} locale='fa'>
                 <p data-selected={locale === 'fa'}>{ intl.formatMessage({ id: 'settings.modal.languages.persian' }) }</p>
-              </Link>
-              <Link href={asPath} locale='en'>
+              </TLink>
+              <TLink href={asPath} locale='en'>
                 <p data-selected={locale === 'en'}>{ intl.formatMessage({ id: 'settings.modal.languages.english' }) }</p>
-              </Link>
+              </TLink>
             </div>
           </div>
 

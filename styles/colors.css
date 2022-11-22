@@ -14,6 +14,7 @@
   --success: #3cd278;
   --onAlert: white;
   --tagBackground: #12121214;
+  --transtionBarColor: #fafafa;
 
   background: var(--background);
   color: var(--onBackground);
@@ -35,6 +36,7 @@
   --success: #3cd278;
   --onAlert: #121212;
   --tagBackground: #ffffff3D;
+  --transtionBarColor: #222222;
 
   background: var(--background);
   color: var(--onBackground);

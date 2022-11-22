@@ -5,9 +5,9 @@ import ColorSelector from '../color_selector/color_selector';
 import Spacer from '../spacer/spacer';
 import SizeSelector from '../size_selector/size_selector';
 import LikeButton from '../like_button/like_button';
-import Link from 'next/link';
 import ShareButton from '../share_button/share_button';
 import FullScreenButton from '../full_screen_button/full_screen_button';
+import { TLink } from '../transition/transition';
 
 interface ProductDetailsProps {
   product: {
@@ -44,7 +44,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
           <header>
             <ul className={styles.details__direction}>
               <li className={styles.details__direction__link}>
-                <Link href='/'>{ intl.formatMessage({ id: 'product.details.home' }) }</Link>
+                <TLink href='/'>{ intl.formatMessage({ id: 'product.details.home' }) }</TLink>
               </li>
 
               <li>{'>'}</li>

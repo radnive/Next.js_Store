@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 
 import en from '../lang/en.json';
 import fa from '../lang/fa.json';
+import { TransitionProvider } from '../components/transition/transition';
 const messages = { en, fa };
 
 const getDirection = (locale: string) => (locale === 'en')? 'ltr' : 'rtl';
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <IntlProvider locale={locale} messages={messages[locale as keyof typeof messages]}>
       <ThemeProvider defaultTheme='system' enableSystem={true}>
-        <Component {...pageProps} dir={getDirection(locale)} />
+        <TransitionProvider>
+          <Component {...pageProps} dir={getDirection(locale)} />
+        </TransitionProvider>
       </ThemeProvider>
     </IntlProvider>
   );

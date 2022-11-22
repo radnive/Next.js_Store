@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import MenuButton from "../menu_button/menu_button";
 import SettingsModal from "../settings_modal/settings_modal";
 import SearchIcon from "../icons/search_icon/search_icon";
-import Link from 'next/link';
+import { TLink } from '../transition/transition';
 
 const Header: FC = () => {
   const intl = useIntl();
@@ -18,6 +18,7 @@ const Header: FC = () => {
     gsap.to(headerRef.current, {
       y: 0,
       duration: .5,
+      delay: 3,
       ease: 'power3.out'
     });
   });
@@ -30,9 +31,9 @@ const Header: FC = () => {
 
         <div className={`${styles.header__main} container`}>
           <div className={styles.header__top_section}>
-            <h1 className={styles.header__logo}>
+            <TLink href='/' className={styles.header__logo}>
               { intl.formatMessage({ id: 'app.name' }) }
-            </h1>
+            </TLink>
 
             <MenuButton isOpen={isMenuOpen} setMenuState={setMenuState} />
           </div>
@@ -47,9 +48,13 @@ const Header: FC = () => {
             } : {}}
           >
             <ul className={styles.header__links}>
+              <li>
+                <TLink href='/'>
+                  { intl.formatMessage({ id: 'header.menu_item.home' }) }
+                </TLink>
+              </li>
               {
                 [
-                  intl.formatMessage({ id: 'header.menu_item.home' }),
                   intl.formatMessage({ id: 'header.menu_item.collections' }),
                   intl.formatMessage({ id: 'header.menu_item.brands' }),
                   intl.formatMessage({ id: 'header.menu_item.new' }),
@@ -61,13 +66,13 @@ const Header: FC = () => {
             </ul>
 
             <div className={styles.header__accessibility}>
-              <Link
+              <TLink
                 className={styles.header__search_box}
                 href='/#search_section'
                 onClick={() => setMenuState(false)}
               >
                 <SearchIcon /> { intl.formatMessage({ id: 'header.search' }) }
-              </Link>
+              </TLink>
 
               <div className={styles.header__divider} />
 
