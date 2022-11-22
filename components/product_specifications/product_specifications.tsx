@@ -1,8 +1,11 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
 import ChevronIcon from '../icons/chevron_icon/chevron_icon';
 import styles from './ProductSpecifications.module.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 interface ProductSpecificationsProps {
   product: {
     id: string,
@@ -15,10 +18,36 @@ interface ProductSpecificationsProps {
 
 const ProductSpecifications: FC<ProductSpecificationsProps> = ({product}) => {
   const intl = useIntl();
+  const mainRef = useRef<HTMLElement>(null);
   const [isShow, setShowStatus] = useState(false);
 
+  useEffect(() => {
+    gsap.fromTo(
+      [
+        mainRef.current,
+        ...Array.of(mainRef.current?.childNodes)
+      ],
+      {
+        y: '5rem',
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: .5,
+        stagger: .1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: mainRef.current,
+          start: 'top 70%',
+          toggleActions: 'play resume resume resume'
+        }
+      }
+    );
+  }, [mainRef]);
+
   return (
-    <section className={styles.main}>
+    <section ref={mainRef} className={styles.main}>
       <h2 className={styles.title}>{ product.name }</h2>
 
       <div className='divider' />

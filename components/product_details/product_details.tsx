@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import styles from './ProductDetails.module.css';
 import { useIntl } from 'react-intl';
+import { gsap } from 'gsap';
 import ColorSelector from '../color_selector/color_selector';
 import Spacer from '../spacer/spacer';
 import SizeSelector from '../size_selector/size_selector';
@@ -8,7 +9,6 @@ import LikeButton from '../like_button/like_button';
 import ShareButton from '../share_button/share_button';
 import FullScreenButton from '../full_screen_button/full_screen_button';
 import { TLink } from '../transition/transition';
-
 interface ProductDetailsProps {
   product: {
     id: string,
@@ -25,11 +25,64 @@ interface ProductDetailsProps {
 
 const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
   const intl = useIntl();  
+  const mainRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+  const timeline = useRef(gsap.timeline());
+
+  useEffect(() => {
+    const tl = timeline.current;
+
+    tl?.fromTo(mainRef.current,
+      {
+        y: '5rem',
+        opacity: 0 
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 3,
+        duration: .5
+      }
+    );
+
+    tl?.fromTo('#product_details__image',
+      {
+        scale: 1.12
+      },
+      {
+        scale: 1,
+        duration: 2,
+        ease: 'power4.out'
+      },
+      '<10%'
+    );
+
+    tl?.fromTo(
+      [
+        ...Array.of(headerRef.current?.childNodes),
+        ...Array.of(footerRef.current?.childNodes)
+      ],
+      {
+        y: '5rem',
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: .5,
+        stagger: .05,
+        ease: 'power2.out',
+      },
+      '<10%'
+    );
+  }, [mainRef]);
 
   return (
-    <div className={styles.main}>
+    <section ref={mainRef} className={styles.main}>
       <div className={styles.image_container}>
         <img
+          id='product_details__image'
           className={styles.image}
           src={product.image}
           alt={product.name}
@@ -41,7 +94,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
 
       <div className={styles.details_container}>
         <div className={styles.details}>
-          <header>
+          <header ref={headerRef}>
             <ul className={styles.details__direction}>
               <li className={styles.details__direction__link}>
                 <TLink href='/'>{ intl.formatMessage({ id: 'product.details.home' }) }</TLink>
@@ -59,7 +112,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
             <h1 className={styles.details__name}>{product.name}</h1>
           </header>
 
-          <footer>
+          <footer ref={footerRef}>
             <ColorSelector colors={product.colors} />
 
             {
@@ -83,7 +136,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
           </footer>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
