@@ -6,6 +6,9 @@ import { useIntl } from 'react-intl';
 import CircularLoading from '../circular_loading/circular_loading';
 import LogoIcon from '../icons/logo/logo';
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 interface TLinkProps {
   children: ReactNode | ReactNode[],
@@ -85,6 +88,10 @@ export const TransitionProvider: FC<TransitionProviderProps> = ({children}) => {
   );
 }
 
+function scrollTo(id: string) {
+  gsap.to(window, { duration: 1, ease: 'power3.out', scrollTo: id });
+}
+
 function getUrlInfo(url: string, locale: string | undefined) {
   const tag = (url.includes('#'))? url.slice(url.lastIndexOf('#'), url.length) : '';
 
@@ -97,7 +104,7 @@ function getUrlInfo(url: string, locale: string | undefined) {
 }
 
 export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick, locale}) => {
-  const { asPath, push } = useRouter();
+  const { asPath, push, reload } = useRouter();
   const anchorRef = useRef<HTMLAnchorElement>(null);
   const timeline = useRef(gsap.timeline());
   const hUrl = getUrlInfo(href, locale); // href
@@ -108,9 +115,8 @@ export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick
 
     if (hUrl.main !== cUrl.main) startTransition();
     else if (hUrl.locale && hUrl.locale != cUrl.locale) startTransition();
-    else if (hUrl.tag !== cUrl.tag) {
-      if (hUrl.asPath.length > cUrl.asPath.length) push(hUrl.asPath);
-    }
+    else if (hUrl.tag === cUrl.tag) scrollTo(hUrl.tag);
+    else if (hUrl.asPath.length > cUrl.asPath.length) scrollTo(hUrl.tag)
   }
   
   function startTransition() {
