@@ -3,15 +3,18 @@ import { FC } from "react";
 import LikeButton from "../like_button/like_button";
 import { ProductBrief } from '../../models/product';
 import { TLink } from '../transition/transition';
+import { useRouter } from 'next/router';
 
 interface ProductItemProps {
   product: ProductBrief
 }
 
 const ProductItem: FC<ProductItemProps> = ({product}) => {
+  const { locale } = useRouter();
+
   return (
     <article className={styles.product_item}>
-      <div className={styles.product_item__header}>
+      <div className={styles.product_item__header} lang={locale}>
         <TLink href={`/product/${product.id}`} className={styles.product_item__image}>
           <img src={product.image} alt={product.name} />
         </TLink>
@@ -32,9 +35,11 @@ const ProductItem: FC<ProductItemProps> = ({product}) => {
 }
 
 const ProductItemShimmer = () => {
+  const { locale } = useRouter();
+
   return (
     <article className={styles.product_item_shimmer}>
-      <div className={styles.product_item_shimmer__image}>
+      <div className={styles.product_item_shimmer__image} lang={locale}>
         <div className={styles.product_item_shimmer__category} />
         <div className={styles.product_item_shimmer__favorite} />
       </div>
