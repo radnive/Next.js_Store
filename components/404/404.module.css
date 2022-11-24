@@ -10,8 +10,8 @@
   width: 16rem;
   height: 16rem;
   transform: scale(0);
-  -webkit-animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 3s forwards;
-          animation: pumbUpAnim 1s cubic-bezier(1, -0.29, 0, 1.43) 3s forwards;
+  -webkit-animation: pumbUpAnim 1s cubic-bezier(0, 0, 0, 1) 3s forwards;
+          animation: pumbUpAnim 1s cubic-bezier(0, 0, 0, 1) 3s forwards;
 }
 
 .message {
