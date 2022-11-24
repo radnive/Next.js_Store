@@ -10,7 +10,7 @@
   }
 
   &:hover &__image img {
-    transform: rotateZ(-5deg) scale(1.2);
+    transform: rotateZ(0) scale(1);
   }
 
   &__image{
@@ -26,6 +26,7 @@
       object-fit: cover;
       transition: all .3s;
       color: var(--box);
+      transform: rotateZ(-5deg) scale(1.2);
     }
   }
 
