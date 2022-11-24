@@ -46,10 +46,10 @@ export const TransitionProvider: FC<TransitionProviderProps> = ({children}) => {
       duration: .5
     });
 
-    tl?.set('#transition_logo', { scale: 0 });
+    tl?.set('#transition_logo_icon', { scale: 0 });
     tl?.set('#transition_name', {
-      rotateY: '66deg',
-      translateX: '60%'
+      rotateY: (intl.locale === 'en')? '45deg' : '-45deg',
+      translateX: (intl.locale === 'en')? '60%' : '-60%'
     });
 
     tl?.to('.transition_bar_item',
@@ -70,9 +70,9 @@ export const TransitionProvider: FC<TransitionProviderProps> = ({children}) => {
           ))
         }
         
-        <li className={styles.logo}>
-          <LogoIcon id='transition_logo' />
-          <p id='transition_name'>
+        <li id='transition_logo' className={styles.logo}>
+          <LogoIcon id='transition_logo_icon' />
+          <p id='transition_name' lang={intl.locale}>
             { intl.formatMessage({ id: 'app.name' }) }
             <b>{ intl.formatMessage({ id: 'app.domain.suffix' }) }</b>
           </p>
@@ -104,7 +104,7 @@ function getUrlInfo(url: string, locale: string | undefined) {
 }
 
 export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick, locale}) => {
-  const { asPath, push, reload } = useRouter();
+  const { asPath, push } = useRouter();
   const anchorRef = useRef<HTMLAnchorElement>(null);
   const timeline = useRef(gsap.timeline());
   const hUrl = getUrlInfo(href, locale); // href
@@ -133,10 +133,11 @@ export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick
       ease: 'power2.out'
     });
 
-    tl?.to('#transition_logo',
+    tl?.set('#transition_logo', { opacity: 1 })
+
+    tl?.to('#transition_logo_icon',
     {
       scale: 1,
-      opacity: 1,
       duration: 1.2,
       ease: 'elastic.out'
     }, '<60%');
@@ -146,7 +147,7 @@ export const TLink: FC<PartialTLinkProps> = ({children, className, href, onClick
       rotateY: 0,
       translateX: 0,
       ease: 'power4.out',
-      duration: .7
+      duration: 1
     }, '<10%');
 
     tl?.to('#transition_loading', {
