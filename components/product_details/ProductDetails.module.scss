@@ -22,6 +22,7 @@
 
 .share_button {
   position: absolute;
+  backdrop-filter: blur(0.5rem);
   
   &:lang(fa) {
     top: 1rem;
@@ -36,6 +37,7 @@
 
 .full_screen_button {
   position: absolute;
+  backdrop-filter: blur(0.5rem);
   
   &:lang(fa) {
     bottom: 1rem;
