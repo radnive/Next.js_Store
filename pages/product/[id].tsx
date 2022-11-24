@@ -13,8 +13,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 }
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  const res = await fetch(`http://localhost:3000/api/info/${params?.id}`);
+export const getStaticProps: GetStaticProps = async ({params, locale}) => {
+  console.log(locale);
+  const res = await fetch(`http://localhost:3000/api/${locale}/info/${params?.id}`);
   const data = await res.json();
 
   return {

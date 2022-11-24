@@ -1,14 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { allProducts, ApiResponse, sliceArray, summarize } from '../../../models/products_list';
+import { getAllProducts, ApiResponse, sliceArray } from '../../../../models/products_list';
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ApiResponse | { message: string }>
 ) {
   // Get params
+  const locale = req.query.locale;
   const params = (req.query.params as Array<string>);
 
   if(params.length >= 2) {
+    const allProducts = getAllProducts(locale);
     const category = params[0];
     const pageIndex = Number.parseInt(params[1]);
 

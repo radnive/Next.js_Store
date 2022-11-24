@@ -1,4 +1,4 @@
-import { ProductBrief, ProductInfo } from "./product";
+import { ProductBrief, ProductInfo, SampleSpecifications } from "./product";
 
 export type ApiResponse = {
   products: ProductBrief[],
@@ -34,7 +34,48 @@ export function summarize(product: ProductInfo) : ProductBrief {
   };
 }
 
-export const allProducts: ProductInfo[] = [
+export function getSampleSpecifications(locale: string | string[] | undefined) : SampleSpecifications {
+  switch(locale) {
+    case 'en':
+      return {
+        explanation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Magna eget est lorem ipsum. Interdum posuere lorem ipsum dolor sit amet. Nec sagittis aliquam malesuada bibendum arcu. Est lorem ipsum dolor sit amet. Aliquet nibh praesent tristique magna sit amet. Et netus et malesuada fames. Tortor consequat id porta nibh venenatis cras sed. Lorem sed risus ultricies tristique nulla aliquet enim. Hac habitasse platea dictumst quisque. Quis lectus nulla at volutpat diam ut venenatis tellus in. Fames ac turpis egestas maecenas pharetra. Lobortis mattis aliquam faucibus purus in massa. Amet commodo nulla facilisi nullam vehicula. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Tortor consequat id porta nibh venenatis cras sed. Sem nulla pharetra diam sit amet. Urna id volutpat lacus laoreet non curabitur gravida arcu. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Ac feugiat sed lectus vestibulum mattis. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Egestas dui id ornare arcu odio ut sem nulla. Sed viverra ipsum nunc aliquet bibendum enim. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. In metus vulputate eu scelerisque.\n\nCursus turpis massa tincidunt dui. Enim nunc faucibus a pellentesque sit amet. Arcu risus quis varius quam quisque id diam. Ac placerat vestibulum lectus mauris ultrices eros. Nisl nisi scelerisque eu ultrices vitae auctor eu augue ut. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Non nisi est sit amet facilisis magna etiam tempor. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Risus nullam eget felis eget nunc lobortis mattis. Bibendum enim facilisis gravida neque convallis a. Duis tristique sollicitudin nibh sit. Semper quis lectus nulla at volutpat diam ut. Est lorem ipsum dolor sit amet. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. At varius vel pharetra vel. Lobortis scelerisque fermentum dui faucibus in ornare. Risus sed vulputate odio ut enim blandit volutpat maecenas:",
+        features: [
+          "Arcu cursus euismod quis viverra nibh cras.",
+          "Eget nunc lobortis mattis aliquam. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi.",
+          "Hendrerit dolor magna eget est lorem ipsum dolorsit amet!",
+          "Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing.",
+          "Nibh venenatis cras sed felis eget velit aliquet sagittis.",
+          "Posuere ac ut consequat semper. Condimentum mattis pellentesque id nibh tortor id aliquet lectus.",
+          "Laoreet suspendisse interdum consectetur libero.",
+          "Volutpat consequat mauris nunc congue nisi. Lacus vel facilisis volutpat est velit egestas dui."
+        ]
+      };
+
+    case 'fa':
+      return {
+        explanation: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.\n\nلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت:",
+        features: [
+          "چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.",
+          "متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.",
+          "جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد!",
+          "کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.",
+          "برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
+          "می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد.",
+          "جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+          "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+        ]
+      };
+
+    default:
+      return { explanation: '', features: [] };
+  }
+}
+
+export function getAllProducts(locale: string | string[] | undefined) {
+  return (locale === 'en')? allProductsEn : allProductsFa;
+}
+
+const allProductsEn: ProductInfo[] = [
   {
     id: "alkdjsflkajsi324",
     name: "Rainbow Sneakers",
@@ -846,6 +887,840 @@ export const allProducts: ProductInfo[] = [
       image: "/images/products/atakan-narman-Czq0SZVXxuw-unsplash.jpg",
       category: "Speaker",
       brand: "JBL",
+      colors: [
+        "#F6CF31",
+        "#1AC1FF",
+        "#7EFF3C",
+        "#FF4F3B",
+        "#AB47DF"
+      ],
+      sizes: [],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "products"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  }
+];
+
+const allProductsFa: ProductInfo[] = [
+  {
+    id: "alkdjsflkajsi324",
+    name: "کفش کتانی رنگین کمانی",
+    price: 90,
+    details: {
+      image: "/images/products/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg",
+      category: "کفش",
+      brand: "نایک",
+      colors: [
+        "#F4CDCE",
+        "#F8F7FC",
+        "#D9D7FC",
+        "#F8E0B0",
+        "#C3F0FF"
+      ],
+      sizes: [
+        "40",
+        "41",
+        "42"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "popular",
+      "hot",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "asdf3erew34rdsf",
+    name: "کیف چرمی",
+    price: 50,
+    details: {
+      image: "/images/products/irene-kredenets-tcVH_BwHtrc-unsplash.jpg",
+      category: "کیف",
+      brand: "مایکل کورث",
+      colors: [
+        "#A1553D",
+        "#18181A",
+        "#FFFFFF"
+      ],
+      sizes: [],
+      isFavorite: true
+    },
+    types: [
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "asdfk55d3wrwefsld",
+    name: "بلوز گشاد",
+    price: 70,
+    details: {
+      image: "/images/products/tobias-tullius-Fg15LdqpWrs-unsplash.jpg",
+      category: "بلوز",
+      brand: "تاواکاسن",
+      colors: [
+        "#BE775D",
+        "#2B2F3B",
+        "#D0D4D7"
+      ],
+      sizes: [
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "hot"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "asdlkfjdkfdsf3rwefsd",
+    name: "کفش پاشنه بلند",
+    price: 40,
+    details: {
+      image: "/images/products/mohammad-metri-E-0ON3VGrBc-unsplash.jpg",
+      category: "کفش",
+      brand: "لیوار بریدد",
+      colors: [
+        "#1774B1",
+        "#BD0A3C"
+      ],
+      sizes: [
+        "35",
+        "37",
+        "38",
+        "40"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "products",
+      "popular"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdkfe3rdslj00dvdsf",
+    name: "تیشرت مشکی",
+    price: 20,
+    details: {
+      image: "/images/products/faith-yarn-Wr0TpKqf26s-unsplash.jpg",
+      category: "پیراهن",
+      brand: "گیلدان",
+      colors: [
+        "#141319",
+        "#FFFFFF"
+      ],
+      sizes: [
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "work",
+      "hot"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "ajdsflkjer23r77sdfk",
+    name: "پیراهن سفید",
+    price: 30,
+    details: {
+      image: "/images/products/mediamodifier-TvL5vIgwiwo-unsplash.jpg",
+      category: "پیراهن",
+      brand: "هانز",
+      colors: [
+        "#FFFFFF",
+        "#21211E",
+        "#D9A26A",
+        "#6F675A"
+      ],
+      sizes: [
+        "S",
+        "L",
+        "XXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "products",
+      "popular",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdf323rfsdfsdt3322sd",
+    name: "کیف لپ تاپ",
+    price: 40,
+    details: {
+      image: "/images/products/sun-lingyan-_H0fjILH5Vw-unsplash.jpg",
+      category: "کیف",
+      brand: "داچی",
+      colors: [
+        "#495472",
+        "#ECD446"
+      ],
+      sizes: [],
+      isFavorite: false
+    },
+    types: [
+      "work",
+      "products"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdlkfjslj3423fkjsdf",
+    name: "شلوار جین پاره شده",
+    price: 20,
+    details: {
+      image: "/images/products/tamara-bellis-gmw_1R_gAdg-unsplash.jpg",
+      category: "شلوار",
+      brand: "جنلک",
+      colors: [
+        "#B3C0C9"
+      ],
+      sizes: [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdfsdfsddd3333edfdf3t00",
+    name: "هدفون سفید",
+    price: 490,
+    details: {
+      image: "/images/products/adam-birkett-vISNAATFXlE-unsplash.jpg",
+      category: "هدفون",
+      brand: "بیتز",
+      colors: [
+        "#FFFFFF",
+        "#E54040",
+        "#050052",
+        "#1F1F1E"
+      ],
+      sizes: [],
+      isFavorite: true
+    },
+    types: [
+      "hot",
+      "products"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "asdjflkj34rtq34fdk",
+    name: "کفش کتانی",
+    price: 27,
+    details: {
+      image: "/images/products/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg",
+      category: "کفش",
+      brand: "اسنیکرز",
+      colors: [
+        "#FFFFFF",
+        "#E76B00",
+        "#C1AFA0"
+      ],
+      sizes: [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "recent",
+      "hot"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "skldjf3r3tro0dsfsda5",
+    name: "نه بابا تو!",
+    price: 43,
+    details: {
+      image: "/images/products/alicia-petresc-BciCcl8tjVU-unsplash.jpg",
+      category: "شلوار",
+      brand: "استی فری",
+      colors: [
+        "#757B76"
+      ],
+      sizes: [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "products",
+      "popular"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "asldfjdkf33r304994edd",
+    name: "کیف مشکی",
+    price: 234,
+    details: {
+      image: "/images/products/korie-cull-OmIEij4MhnA-unsplash.jpg",
+      category: "کیف",
+      brand: "لوییس ویتون",
+      colors: [
+        "#0C0F14"
+      ],
+      sizes: [],
+      isFavorite: false
+    },
+    types: [
+      "work",
+      "hot",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "dkdkdkd3939949idkd",
+    name: "کفش دوندگی نایک",
+    price: 133,
+    details: {
+      image: "/images/products/usama-akram-kP6knT7tjn4-unsplash.jpg",
+      category: "کفش",
+      brand: "نایک",
+      colors: [
+        "#B3E140",
+        "#1A1C17",
+        "#FFFFFF",
+        "#FF8C18"
+      ],
+      sizes: [
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "hot",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "kkkkdghdke3d9sdfj349",
+    name: "شلوار جین آبی",
+    price: 55,
+    details: {
+      image: "/images/products/cain-beaudoin-eWKmWtHV4pY-unsplash.jpg",
+      category: "شلوار",
+      brand: "استار",
+      colors: [
+        "#95CCD9",
+        "#FFFFFF",
+        "#FFFFFF"
+      ],
+      sizes: [
+        "L",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "hot",
+      "recent"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "55kjdfkjdfkjdfjkl",
+    name: "تی شرت سفید",
+    price: 48,
+    details: {
+      image: "/images/products/anomaly-WWesmHEgXDs-unsplash.jpg",
+      category: "پیراهن",
+      brand: "بلنک اند وایت",
+      colors: [
+        "#FFFFFF"
+      ],
+      sizes: [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "33ddddddgdvcxvdfasdfererd",
+    name: "مک بوک پرو",
+    price: 1999,
+    details: {
+      image: "/images/products/theregisti-XetpscGVLtg-unsplash.jpg",
+      category: "لپتاپ",
+      brand: "اپل",
+      colors: [
+        "#D5D9DB",
+        "#484A4C",
+        "#F7ABAF"
+      ],
+      sizes: [
+        "8GB RAM",
+        "16GB RAM"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "uudjhksdjhfsdjhf8884",
+    name: "مد پاییز مردانه",
+    price: 37,
+    details: {
+      image: "/images/products/redd-f-jC7nVH_Sw8k-unsplash.jpg",
+      category: "شلوار",
+      brand: "برون استار",
+      colors: [
+        "#B4965E",
+        "#FFD8B9",
+        "#363636"
+      ],
+      sizes: [
+        "L",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "hot",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "133eddfs34435345",
+    name: "سالگرد تیمبرلند",
+    price: 34,
+    details: {
+      image: "/images/products/tom-sodoge-3vAdYH9FfG0-unsplash.jpg",
+      category: "کفش",
+      brand: "زی اس زی ان تی",
+      colors: [
+        "#794B33",
+        "#1A1A1C"
+      ],
+      sizes: [
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "recent",
+      "products",
+      "hot"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "eerrdfd88fdjjffff",
+    name: "نایک ایر قهوه ای",
+    price: 180,
+    details: {
+      image: "/images/products/maksim-larin-NOpsC3nWTzY-unsplash.jpg",
+      category: "کفش",
+      brand: "نایک",
+      colors: [
+        "#94562A",
+        "#322826",
+        "#FFFFFF"
+      ],
+      sizes: [
+        "41",
+        "42",
+        "43"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "popular",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "dkddke030030034t4434",
+    name: "ژاکت مشکی",
+    price: 45,
+    details: {
+      image: "/images/products/joshua-rondeau-K0FXYExhnGc-unsplash.jpg",
+      category: "ژاکت",
+      brand: "دارک-گری",
+      colors: [
+        "#1D1D25"
+      ],
+      sizes: [
+        "S",
+        "M",
+        "XL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "popular",
+      "products"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdfjk3434kjd888df3dd",
+    name: "هدفون مشکی",
+    price: 153,
+    details: {
+      image: "/images/products/luke-peterson-lUMj2Zv5HUE-unsplash.jpg",
+      category: "هدفون",
+      brand: "سونی",
+      colors: [
+        "#151515",
+        "#FF7D68",
+        "#C3F0FF",
+        "#FFFFFF"
+      ],
+      sizes: [],
+      isFavorite: true
+    },
+    types: [
+      "recent",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "12kddhe939ddjd6ehdhssdk",
+    name: "شلوار صورتی",
+    price: 89,
+    details: {
+      image: "/images/products/engin-akyurt-5raPrOhbKQo-unsplash.jpg",
+      category: "شلوار",
+      brand: "پینک دایمند",
+      colors: [
+        "#D2A495",
+        "#FFFFFF",
+        "#3C3C3C"
+      ],
+      sizes: [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "popular",
+      "recent",
+      "products"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "dfsdf88ddjdj55455jf",
+    name: "پیراهن مشکی",
+    price: 44,
+    details: {
+      image: "/images/products/sven-ciupka-x8Vg7Up6TUc-unsplash.jpg",
+      category: "پیراهن",
+      brand: "ال اس کی دی",
+      colors: [
+        "#0E0C0D",
+        "#FF5E00",
+        "#6DFF2E",
+        "#58C6EB",
+        "#FFFFFF",
+        "#241D40"
+      ],
+      sizes: [
+        "M",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "hot",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "kdsfjsdjf300303ekjfdk",
+    name: "ژاکت لی",
+    price: 27,
+    details: {
+      image: "/images/products/benjamin-voros-TnNo84AJJ5A-unsplash.jpg",
+      category: "ژاکت",
+      brand: "آی سی یو",
+      colors: [
+        "#A1C7DA"
+      ],
+      sizes: [
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      isFavorite: true
+    },
+    types: [
+      "hot",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "rertert4444trefdfg44",
+    name: "ماوس G102",
+    price: 128,
+    details: {
+      image: "/images/products/ryan-putra-j4PqlNVZ4Bc-unsplash.jpg",
+      category: "ماوس",
+      brand: "لاجیتک",
+      colors: [
+        "#1E2225"
+      ],
+      sizes: [],
+      isFavorite: false
+    },
+    types: [
+      "recent",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "2323dfdsflkdsjfldi33",
+    name: "سرفیس پرو",
+    price: 1999,
+    details: {
+      image: "/images/products/windows-c-lUYtNjqxw-unsplash.jpg",
+      category: "لپتاپ",
+      brand: "مایکروسافت",
+      colors: [
+        "#D4D4D4",
+        "#4F5760",
+        "#C3F0FF"
+      ],
+      sizes: [
+        "8GB RAM",
+        "16GB RAM"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "hot",
+      "recent",
+      "products",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "sdjflkf3430jdslkfj344",
+    name: "کت آبی",
+    price: 139,
+    details: {
+      image: "/images/products/napat-saeng-_zx9p82J9sc-unsplash.jpg",
+      category: "ژاکت",
+      brand: "لین",
+      colors: [
+        "#004193"
+      ],
+      sizes: [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      isFavorite: false
+    },
+    types: [
+      "popular",
+      "recent",
+      "work"
+    ],
+    specifications: {
+      explanation: "",
+      features: []
+    },
+    similar: []
+  },
+  {
+    id: "df333kdjfldksfj0009dfdd",
+    name: "بلندگوی بلند",
+    price: 164,
+    details: {
+      image: "/images/products/atakan-narman-Czq0SZVXxuw-unsplash.jpg",
+      category: "بلندگو",
+      brand: "جی بی ال",
       colors: [
         "#F6CF31",
         "#1AC1FF",

@@ -52,7 +52,7 @@ const ExploreProducts: FC = () => {
     setCategory(index);
     setLoadingState(LoadingState.loading);
     if(searchInputRef.current) searchInputRef.current.value = '';
-    loadData(`http://localhost:3000/api/list/${categories[index].id}`);
+    loadData(`http://localhost:3000/api/${intl.locale}/list/${categories[index].id}`);
   }
 
   const handleSearchButton = () => {
@@ -62,7 +62,7 @@ const ExploreProducts: FC = () => {
       if(searchQuery !== '') {
         setCategory(-1);
         setLoadingState(LoadingState.loading);
-        loadData(`http://localhost:3000/api/search/${searchQuery.toLowerCase()}`);
+        loadData(`http://localhost:3000/api/${intl.locale}/search/${searchQuery.toLowerCase()}`);
       }
     }
   }
@@ -72,9 +72,9 @@ const ExploreProducts: FC = () => {
     loadData(requestInfo.url, requestInfo.pageIndex, true);
   }
 
+  useEffect(() => handleCategorySwitching(0), [intl.locale]);
+
   useEffect(() => {
-    handleCategorySwitching(0);
-    
     if (mainRef.current) {
       gsap.fromTo(mainRef.current.childNodes, {
         y: '5rem',

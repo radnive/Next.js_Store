@@ -28,3 +28,8 @@ export type ProductInfo = {
   },
   similar: ProductBrief[]
 }
+
+export type SampleSpecifications = {
+  explanation: string,
+  features: string[]
+}
