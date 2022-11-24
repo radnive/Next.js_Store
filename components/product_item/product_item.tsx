@@ -12,10 +12,8 @@ const ProductItem: FC<ProductItemProps> = ({product}) => {
   return (
     <article className={styles.product_item}>
       <div className={styles.product_item__header}>
-        <TLink href={`/product/${product.id}`}> 
-          <div className={`${styles.product_item__image} ${styles.box}`}>
-            <img src={product.image} alt={product.name} />
-          </div>
+        <TLink href={`/product/${product.id}`} className={styles.product_item__image}>
+          <img src={product.image} alt={product.name} />
         </TLink>
         <p className={styles.product_item__category}>{product.category}</p>
         <LikeButton className={styles.product_item__favorite} liked={product.isFavorite} />
