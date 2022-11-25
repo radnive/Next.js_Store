@@ -71,7 +71,7 @@ export const TransitionProvider: FC<TransitionProviderProps> = ({children}) => {
         }
         
         <li id='transition_logo' className={styles.logo}>
-          <LogoIcon id='transition_logo_icon' />
+          <LogoIcon id='transition_logo_icon' locale={locale} />
           <p id='transition_name' lang={intl.locale}>
             { intl.formatMessage({ id: 'app.name' }) }
             <b>{ intl.formatMessage({ id: 'app.domain.suffix' }) }</b>
