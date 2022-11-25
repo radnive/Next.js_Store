@@ -25,7 +25,7 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
-  const intl = useIntl();  
+  const intl = useIntl();
   const mainRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
@@ -88,7 +88,7 @@ const ProductDetails: FC<ProductDetailsProps> = ({product}) => {
       },
       '<10%'
     );
-  }, [mainRef]);
+  });
 
   return (
     <>
