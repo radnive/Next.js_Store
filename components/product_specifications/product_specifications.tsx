@@ -44,7 +44,7 @@ const ProductSpecifications: FC<ProductSpecificationsProps> = ({product}) => {
         }
       }
     );
-  }, [mainRef]);
+  });
 
   return (
     <section ref={mainRef} className={styles.main}>

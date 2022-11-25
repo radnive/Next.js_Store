@@ -40,7 +40,7 @@ const SimilarProducts: FC<SimilarProductsProps> = ({category, products}) => {
         }
       }
     );
-  }, [mainRef]);
+  });
 
   return (
     <section ref={mainRef} className={styles.main}>
