@@ -54,8 +54,8 @@ This website is designed to be easy to use, but at the same time, it has many fe
 
 The demo version of the website with less features has been launched on Liara servers. There are about 28 items in this version. Searching and filtering based on the type of products is possible, but filtering based on other details is currently not available. The shopping cart is not active in this version, but the possibility of viewing product details has been implemented. You can experience this version in Persian and English.
 
-- **In English**: [www.next-store.iran.liara.run](https://www.next-store.iran.liara.run)
-- **In Persian**: [www.next-store.iran.liara.run/fa](https://www.next-store.iran.liara.run/fa)
+- **In English**: [https://next-store.iran.liara.run](https://next-store.iran.liara.run)
+- **In Persian**: [https://next-store.iran.liara.run/fa](https://next-store.iran.liara.run/fa)
 
 ## Project cloning tips
 

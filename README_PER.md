@@ -54,8 +54,8 @@
 
 نسخه دمو وبسایت با امکانات کمتر بر روی سرورهای لیارا راه اندازی شده است. در این نسخه تعداد حدودی ۲۸ کالا قرار دارد. جستجو و فیلتر کردن بر اساس نوع کالا ها امکان پذیر است ولی فیلتر کردن بر اساس سایر جزئیات فعلا در دسترس نیست. سبد خرید هم در این نسخه فعال نیست ولی امکان مشاهده جزئیات کالا پیاده سازی شده است. شما می توانید این نسخه را در دو زبان پارسی و انگلیسی تجربه کنید.
 
-- **به زبان پارسی**: [www.next-store.iran.liara.run/fa](https://www.next-store.iran.liara.run/fa)
-- **به زبان انگلیسی**: [www.next-store.iran.liara.run](https://www.next-store.iran.liara.run)
+- **به زبان پارسی**: [https://next-store.iran.liara.run/fa](https://next-store.iran.liara.run/fa)
+- **به زبان انگلیسی**: [https://next-store.iran.liara.run](https://next-store.iran.liara.run)
 
 ## نکات شبیه سازی پروژه
 
