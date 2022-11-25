@@ -12,6 +12,7 @@
   position: relative;
   aspect-ratio: 0.75;
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .image {
@@ -19,7 +20,6 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0.5rem;
 }
 
 .share_button {

@@ -39,7 +39,7 @@ const ProductSpecifications: FC<ProductSpecificationsProps> = ({product}) => {
         ease: 'power2.out',
         scrollTrigger: {
           trigger: mainRef.current,
-          start: 'top 70%',
+          start: 'top 85%',
           toggleActions: 'play resume resume resume'
         }
       }
